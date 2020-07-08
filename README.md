@@ -6,6 +6,7 @@ Prerequisites:
 
 Build WebApi:
 1) Navigate to webapi folder
+2) Run 'dotnet restore'
 2) Run 'dotnet build'
 3) Run 'dotnet run'
 
