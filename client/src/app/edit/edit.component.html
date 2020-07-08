@@ -1,0 +1,14 @@
+<tr >
+<td class="text-center">{{ data.employeeNumber || '' }}</td>
+<td>
+  <input name="name" [(ngModel)]="data.firstName" type="text" class="form-control">
+</td>
+<td>
+  <input name="name" [(ngModel)]="data.lastName" type="text" class="form-control">
+</td>
+
+<td>
+  <button type="button" class="btn btn-default btn-sm">Cancel</button>
+  <button [disabled]="data.firstName.length === 0 || data.lastName.length === 0 " (click)="editSubmit()" type="button" class="btn btn-success btn-sm">Save</button>
+</td>
+</tr>

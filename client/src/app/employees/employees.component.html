@@ -1,0 +1,39 @@
+<table class="table table-hover ">
+  <thead>
+    <tr>
+      <th style="width: 10%" class="text-center">#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th style="width: 15%">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let employee of employees">
+      <tr *ngIf="!idEdit || idEdit !== employee.employeeNumber">
+        <td class="text-center">{{ employee.employeeNumber }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>
+          <button (click)="clickEdit(employee)" type="button" class="btn btn-warning btn-sm">Edit</button>
+          <button (click)="deleteEmployee.emit(employee.employeeNumber)"  type="button" class="btn btn-danger btn-sm">Delete</button>
+        </td>
+      </tr>
+      
+      <tr *ngIf="idEdit && idEdit == employee.employeeNumber">
+      
+          <td class="text-center">{{ employee.employeeNumber }}</td>
+          <td>
+            <input name="firstName" [(ngModel)]="dataEdit.firstName" type="text" class="form-control">
+          </td>
+          <td>
+            <input name="lastName" [(ngModel)]="dataEdit.lastName" type="text" class="form-control">
+          </td>
+          <td>
+            <button (click)="idEdit = null" type="button" class="btn btn-default btn-sm">Cancel</button>
+            <button [disabled]="dataEdit.firstName.length === 0 || dataEdit.lastName.length === 0" (click)="editSubmit()" type="button" class="btn btn-success btn-sm">Save</button>
+          </td>
+      </tr>
+
+    </ng-container>
+  </tbody>
+</table>

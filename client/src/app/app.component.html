@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="page-header">
+		<h1>Employees List</h1>
+  </div>
+  
+	<app-control
+		(createClick)="createNewEmployee($event)"
+	></app-control>
+
+	<div class="panel panel-success">
+		<div class="panel-heading">Employee</div>
+		<app-empoyees 
+			[employees]="employees"
+			(deleteEmployee)="deleteEmployee($event)"
+			(editEmployee)="editEmployee($event)"
+		></app-empoyees>
+	</div>
+</div>
