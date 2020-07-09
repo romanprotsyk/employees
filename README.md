@@ -1,5 +1,9 @@
 # Employees List
 
+![Alt text](app-screenshot.png?raw=true "App Screenshot")
+![Alt text](unit-tests-results.png?raw=true "Unit Tests Results")
+![Alt text](coverage.zip "Code Coverage "Results")
+
 Prerequisites:
 1) Download and install NodeJs https://nodejs.org/uk/download/
 2) Download and install DotNet Core SDK https://dotnet.microsoft.com/download/dotnet-core/3.1
