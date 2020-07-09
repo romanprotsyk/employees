@@ -1,8 +1,8 @@
 # Employees List
 
 ![Alt text](app-screenshot.png?raw=true "App Screenshot")
-![Alt text](unit-tests-results.png?raw=true "Unit Tests Results")
-![Alt text](coverage.zip "Code Coverage "Results")
+![Alt text](unit-tests-result.png?raw=true "Unit Tests Results")
+Code coverage results: coverage.zip
 
 Prerequisites:
 1) Download and install NodeJs https://nodejs.org/uk/download/
